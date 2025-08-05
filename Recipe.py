@@ -1,9 +1,11 @@
+import datetime
 class Recipe:
     def __init__(self, id:str, name:str, author:str, date:str, category:str):
         self.name = name
         self.id = id
         self.author = author
-        self.date = date
+        self.date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        self.category = category
         self.category = category
 
     @property
